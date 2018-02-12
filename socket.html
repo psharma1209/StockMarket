@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Stock Market</title>
+    <script src="angular/angular.min.js"></script>
+    <script src="js/socket.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body ng-app="stockMarketApp">
+    <div class="container" ng-controller="stockMarketController as stockCtrl">
+        <header>
+            <h1>Stock Market Updates</h1>
+        </header>
+        <div class="row">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                <table class="table table-bordered">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Ticker</th>
+                            <th>Price</th>
+                            <th>Previous Price</th>
+                            <th>Last Update</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                    <tr ng-repeat="stock in stockCtrl.stockMarketList">
+                        <td class="stockName">{{stock[0]}}</td>
+                        <td ng-class="stock[4]">{{stock[1]}}</td>
+                        <td>{{stock[2] ? stock[2] : 0}}</td>
+                        <td>{{stock[3] ? stock[3] : ""}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

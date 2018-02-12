@@ -1,0 +1,30 @@
+body {
+  background-color: #4c4c4c;
+  color: #fff;
+}
+h1 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.stockName {
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.green {
+  background-color: green;
+}
+
+.red {
+  background-color: red;
+}
+
+.black {
+  color: #fff;
+}
+
+table tr td,
+table tr th {
+  text-align: center;
+}
